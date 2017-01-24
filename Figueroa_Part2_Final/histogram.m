@@ -1,0 +1,1 @@
+function histo = histogram(Ima)%Function to Get the Histogram of an Image% histo, return the histogram array of the imageif(isa(Ima, 'logical'))	histo = zeros(1,2);	histo(1) = sum(sum(Ima == 0));	histo(2) = sum(sum(Ima == 1));else	%histo = zeros(1,256);	%for i=0:255	% histo(i+1) = sum(sum(Ima == i));	%end	%endif	histo = imhist(Ima);endend
